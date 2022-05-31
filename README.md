@@ -7,6 +7,8 @@ Website:
 https://akaur09.github.io/Secret-password-maker/ 
 
 ![Alt img](./password.png)
+## Usage
+- Users can create a password
 ## Technology
 HTML
 CSS
