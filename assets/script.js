@@ -1,16 +1,10 @@
-
 // Assignment Code:
-var number;
-number = ["1","2","3","4","5","6","7","8","9","0"]
-var Lower;
-Lower = ["a","b","c","d","e","f","g","h","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var Upper;
-Upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var Character;
-Character = ["!","@","#","$","%","^","&","*","-","_","+","="]
+number = ["1","2","3","4","5","6","7","8","9","0"];
+Lower = ["a","b","c","d","e","f","g","h","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+Upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+Character = ["!","@","#","$","%","^","&","*","-","_","+","="];
 var user; 
 var useranswer;
-var user2;
 var userLow;
 var userNum;
 var userUp;
@@ -22,7 +16,7 @@ function writePassword() {
   if (!useranswer) {
       alert("you need to enter a value");
   } else if(useranswer < 8 || useranswer > 126){
-      user2 = prompt ("Please choose between 8 and 125 characters only");
+      useranswer = prompt ("Please choose between 8 and 125 characters only");
   }else{
       number = confirm("Will you like this to contain numbers?");
       Lower = confirm("Will you like this to contain lowercase letters?");
@@ -33,7 +27,7 @@ function writePassword() {
   if (!userNum && !userLow && !userUp && !userChar){
       user = alert("You must choose a critria");
   } else if (userNum && userLow && userUp && userChar){
-      user = (Lower, number,Upper,Character);
+      user =  number.concat (Lower,Upper,Character);
   } else if (userChar && userLow && userUp){
       user = Character.concat (Lower,Upper);
   } else if (userChar && userNum && userLow){
@@ -80,8 +74,15 @@ function writePassword() {
 
 
 // Add event listener to generate button
-var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
+// var generateBtn = document.querySelector("#generate");
+// generateBtn.addEventListener("click", writePassword);
 function UserInput(pass){
     document.getElementById("password").textContent= pass;
 }
+var generate = document.querySelector("#generate");
+// generateBtn.addEventListener("click", writePassword);
+
+generate.addEventListener("click", function(){
+    passcode=writePassword();
+    document.getElementById("password").placeholder= passcode;
+});
