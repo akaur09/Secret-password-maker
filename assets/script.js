@@ -9,7 +9,6 @@ var userLow;
 var userNum;
 var userUp;
 var userChar;
-
 // Write password to the #password input
 function writePassword() {
   useranswer = prompt("how many characters would you like to use for password? choose between 8 and 125");
@@ -18,10 +17,11 @@ function writePassword() {
   } else if(useranswer < 8 || useranswer > 126){
       useranswer = prompt ("Please choose between 8 and 125 characters only");
   }else{
-      number = confirm("Will you like this to contain numbers?");
-      Lower = confirm("Will you like this to contain lowercase letters?");
-      Upper = confirm("will you like this to contain uppercase letters?");
-      Character = confirm("Will you like this to contain special characters?");
+      console.log(useranswer);
+      userNum = confirm("Will you like this to contain numbers?");
+      userLow = confirm("Will you like this to contain lowercase letters?");
+      userUp = confirm("will you like this to contain uppercase letters?");
+      userChar = confirm("Will you like this to contain special characters?");
   }
 //   if choices are confirmed
   if (!userNum && !userLow && !userUp && !userChar){
@@ -59,20 +59,18 @@ function writePassword() {
   }
 // puts password together
     var passwordText = document.querySelector("#password");
-    passwordText.value= password
+    
     var password=[];
-    for (var i = 0; i < user; i++){
+    for (var i = 0; i < useranswer; i++){
         var answers = user[Math.floor(Math.random()* user.length)];
         password.push(answers);
+        console.log(answers);
     }
-
      var pass = password.join("");
      UserInput(pass);
-     return pass;        
+     passwordText.value= pass;       
        
 }   
-
-
 // Add event listener to generate button
 // var generateBtn = document.querySelector("#generate");
 // generateBtn.addEventListener("click", writePassword);
@@ -81,7 +79,6 @@ function UserInput(pass){
 }
 var generate = document.querySelector("#generate");
 // generateBtn.addEventListener("click", writePassword);
-
 generate.addEventListener("click", function(){
     passcode=writePassword();
     document.getElementById("password").placeholder= passcode;
