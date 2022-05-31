@@ -1,18 +1,20 @@
 # Secret-password-maker
 
-# Description
+## Description
 For this assignment, I created a website where it helps the user create stong paswords. My reason for creating this website was to help people make passwords that are not easy to figure out. With hacking being a large part of identity theft, I though that this password generator could provide some help to those that have difficulties in creating unique passwords on their own. 
 
 Website:
 https://akaur09.github.io/Secret-password-maker/ 
 
 ![Alt img](./password.png)
-# Technology
+## Technology
 HTML
 CSS
 JavaScript
 
-# License
+## Creditor
+Amnider Kaur (github: https://github.com/akaur09)
+## License
 
 MIT License
 
