@@ -11,6 +11,10 @@ Character = ["!","@","#","$","%","^","&","*","-","_","+","="]
 var user; 
 var useranswer;
 var user2;
+var userLow;
+var userNum;
+var userUp;
+var userChar;
 
 // Write password to the #password input
 function writePassword() {
@@ -26,37 +30,37 @@ function writePassword() {
       Character = confirm("Will you like this to contain special characters?");
   }
 //   if choices are confirmed
-  if (!number && !Lower && !Upper && !Character){
+  if (!userNum && !userLow && !userUp && !userChar){
       user = alert("You must choose a critria");
-  } else if (Lower && number && Upper && Character){
+  } else if (userNum && userLow && userUp && userChar){
       user = (Lower, number,Upper,Character);
-  } else if (Character && Lower && Upper){
+  } else if (userChar && userLow && userUp){
       user = Character.concat (Lower,Upper);
-  } else if (Character && number && Lower){
+  } else if (userChar && userNum && userLow){
       user = Character.concat (number,Lower);
-  } else if (Character && Upper && number){
+  } else if (userChar && userUp && userNum){
       user = Character.concat (Upper,number);
-  } else if (number && Lower && Upper){
+  } else if (userNum && userLow && userUp){
       user = number.concat (Lower,Upper);
-  } else if (Character && number){
+  } else if (userChar && number){
       user = Character.concat (number);
-  } else if (Character && Lower){
+  } else if (userChar && userLow){
       user = Character.concat (Lower);
-  } else if (Character && Upper){
+  } else if (userChar && userUp){
       user = Character.concat (Upper);
-  } else if (Lower && number){
+  } else if (userLow && userNum){
       user = Lower.concat (number);
-  } else if (Lower && Upper){
+  } else if (userLow && userUp){
       user = Lower.concat (Upper);
-  } else if (Upper && number){
+  } else if (userUp && userNum){
       user = Upper.concat (number);
-  } else if (Upper){
+  } else if (userUp){
       user = Upper;
-  } else if (Lower){
+  } else if (userLow){
       user = Lower;
-  } else if (Character){
+  } else if (userChar){
       user= Character;
-  } else if (number){
+  } else if (userNum){
       user = number;
   }
 // puts password together
