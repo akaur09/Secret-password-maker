@@ -6,7 +6,9 @@ For this assignment, I created a website where it helps the user create stong pa
 Website:
 https://akaur09.github.io/Secret-password-maker/ 
 
-![Alt img](./password.png)
+Demo:
+
+![Alt img](./passowrd-demo.gif)
 ## Usage
 - Users can create a password
 ## Technology
